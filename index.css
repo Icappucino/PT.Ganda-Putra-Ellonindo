@@ -1,0 +1,475 @@
+/* Created By Icappucino */
+
+
+
+/* Pengaturan Warna */
+:root{
+    --main-color:#d3ad7f;
+    --black:#13131a;
+    --bg:#010103;
+    --border:.1rem solid rgba(255,255,255,.3);
+}
+
+/* Font dan Dasar */
+*{
+    font-family: 'Roboto', sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+html::-webkit-scrollbar{
+    width:  .8rem;
+}
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+html::-webkit-scrollbar-thumb{
+    background:#fff;
+    border-radius: 5rem;
+}
+body{
+    background: var(--bg);
+}
+section{
+    padding: 2rem 7%;
+}
+.heading{
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    padding-bottom: 2rem;
+    font-size: 4rem;
+    top: -10%;
+}
+.heading span{
+    color: var(--main-color);
+    text-transform: uppercase;
+    top: 10%;
+}
+.button{
+    text-align: center;
+    background: var(--main-color);
+    padding: 1.5rem;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: relative;
+    display: block;
+}
+.btn{
+    text-align: center;
+    font-size: 2rem;
+    background: var(--main-color);
+    align-items: center;
+    text-decoration: none;
+    display: inline-block;
+    padding: 2rem 0;
+    margin: 2rem;
+    border-radius: 5px;
+    max-block-size: 20rem;
+    line-height: 1.5rem
+}
+.button:hover{
+    text-decoration: underline;
+    background: var(--black);
+}
+.overlay{
+    background-image: url(img/Tambang.jpg);
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 100;
+    margin: 0;
+    padding: 0;
+    opacity: 60%;
+}
+.overlay h3{
+    position: absolute;
+    top: 50%;
+    color: #fff;
+    font-size: 7rem;
+    text-align: center;
+    padding: 2rem;
+    opacity:100%;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: var(--bg);
+    left: 7%;
+}
+.overlay p{
+    position: absolute;
+    top: 62%;
+    left: 20%;
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+}
+.overlay a{
+    position: absolute;
+    top: 66%;
+    left: 42%;
+    padding: 1rem;
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background: var(--main-color);
+}
+.overlay a:hover{
+    background: var(--black);
+    text-decoration: underline;
+}
+/* Pengaturan Header */
+.header{
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+.header .logo img{
+    height: 5rem;
+}
+.header .navbar a{
+    margin:0 1rem;
+    font-size: 1.6rem;
+    color:#ffffff;
+}
+.header .navbar a:hover{
+    color: var(--main-color);
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+.header .icons div{
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+.header .icons div:hover{
+    color: var(--main-color);
+}
+#menu-btn{
+    display: none;
+}
+/* Pengaturan Header Ended */
+
+/* Pengaturan Content */
+.home .row {
+    display: flex;
+    align-items: center;
+    background: var(--black);
+    flex-wrap: wrap;
+}
+.home .row .image{
+    flex: 1 1 45rem;
+}
+.home .row .image img{
+    width: 100%;
+}
+.home .row .content{
+    flex: 1 1 45rem;
+    padding: 2rem;
+}
+.home .row .content h3{
+    font-size: 3rem;
+    color: var(--main-color);
+}
+.home .row .content p{
+    font-size: 1.5rem;
+    color: #fff;
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+/* Pengaturan About Us */
+.about .row{
+    display: flex;
+    align-items: center;
+    background: var(--black);
+    flex-wrap: wrap;
+}
+.about .row .image{
+    flex: 1 1 45rem;
+}
+.about .row .image img{
+    width: 100%;
+    float: right;
+}
+.about .row .content{
+    flex: 1 1 45rem;
+    padding: 2rem;
+}
+.about .row .content h3{
+    font-size: 3rem;
+    color: var(--main-color);
+}
+.about .row .content p{
+    font-size: 1.5rem;
+    color: #fff;
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+/* Pengaturan Produk */
+.produk .box-countainer{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2rem;
+}
+.produk .box-countainer .box{
+    padding: 5rem;
+    text-align: center;
+    border: var(--border);
+}
+.produk .box-countainer .box img{
+    height: 15rem;
+}
+.produk .box-countainer .box h3{
+    font-size: 1.5rem;
+    color: #fff;
+}
+.produk .box-countainer .box:hover{
+    background: #2C3639;
+}
+.produk .box-countainer .box h2{
+    font-size: 3rem;
+    color: #fff;
+}
+.produk .box-countainer .box span{
+    color: #FAD9A1;
+}
+/* Pengaturan Table */
+table {
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    color: #fff;
+}
+th, td {
+    font-size: 1.5rem;
+    border: 2px solid #fff;
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even){
+    background-color: var(--bg);
+}
+th{
+    background-color: var(--main-color);
+    font-size: 2rem;
+}
+/* Pengaturan Layanan */
+.layanan .box-countainer{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2rem;
+}
+.layanan .box-countainer .box{
+    text-align: center;
+    border: var(--border);
+    padding: 2rem;
+}
+.layanan .box-countainer .box:hover{
+    background: #2C3639;
+}
+.layanan .box-countainer .box h2{
+    font-size: 2.5rem;
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+.layanan .box-countainer .box h3{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: var(--main-color);
+}
+.layanan .box-countainer .box h4{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: var(--main-color);
+}
+.layanan .box-countainer .box p{
+    text-align: center;
+    color: #fff;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+/* Pengaturan Layanan Ended */
+/* Pengaturan Legalitas */
+.legalitas .box-countainer{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+}
+.legalitas .box-countainer .box{
+    text-align: center;
+    border: var(--border);
+    padding: 2rem;
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.legalitas .box-countainer .box h2{
+    font-size: 2rem;
+    color: #000;
+    text-transform: uppercase;
+}
+.legalitas .box-countainer .box h3{
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+}
+.legalitas .box-countainer .box h4{
+    font-size: 1.2rem;
+    color: #000;
+    text-transform: capitalize;
+    text-align: center;
+    float: right;
+}
+.legalitas .box-countainer .box h5{
+    font-size: 2rem;
+    color: #000;
+    text-transform: uppercase;
+}
+.legalitas .box-countainer .box h6{
+    font-size: 1.5rem;
+    color: #000;
+    text-transform: capitalize;
+    text-align: center;
+    float: right;
+    right:20px;
+}
+.legalitas .box-countainer .box p{
+    text-align: left;
+    color: #000;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    text-decoration: none;
+    padding: 2rem;
+    margin: 2rem;
+    display: block;
+}
+.legalitas .box-countainer .box p span{
+    font-size: 1.7rem;
+    color: #000;
+    text-transform: capitalize;
+    text-align: left;
+    text-decoration: bold;
+}
+/* Pengaturan Legalitas Ended */
+
+/* Pengaturan Contact */
+.kontak .row{
+    display: grid;
+    background: var(--black);
+    flex-wrap: wrap;
+    gap: 1rem;
+    text-align: center;
+    text-decoration: none;
+    align-items: center;
+}
+.kontak .row .map{
+    flex: 1 1 45rem;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.kontak .row h2{
+    font-size: 1.5rem;
+    color: var(--main-color);
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+}
+.kontak .row h3{
+    font-size: 1.5rem;
+    color: var(--main-color);
+    text-transform: uppercase;
+    text-align: center;
+}
+.kontak .row span{
+    font-size: 4rem;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+}
+.kontak .row p{
+    font-size: 1.5rem;
+    color: #fff;
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+/* Pengaturan Footer */
+.footer{
+    background: var(--black);
+    text-align: center;
+}
+.footer .share{
+    padding: 1rem 0;
+}
+.footer .share h1{
+    font-size: 1.5rem;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+}
+.footer .share a{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    color: #fff;
+    border: var(--border);
+    margin: 1rem;
+    border-radius: 50%;
+}
+.footer .share a:hover{
+    background-color: var(--main-color);
+}
+.footer .links{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    gap: 1rem;
+}
+.footer .links a{
+    padding: .7rem 2rem;
+    color: #fff;
+    border: var(--border);
+    font-size: 2rem;
+}
+.footer .links a:hover{
+    background-color: var(--main-color);
+}
+.footer .credit{
+    font-size: 2rem;
+    color: #fff;
+    font-weight: lighter;
+    padding: 1.5rem;
+}
+.footer .credit span{
+    color: var(--main-color);
+}
